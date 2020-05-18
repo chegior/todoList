@@ -33,4 +33,9 @@ export class TodoService {
     return this.http.put(urlPut,todo, httpOptions);
   }
 
+  addTodoServ(todo:Todo){
+    console.log('http'+todo.title);
+    return this.http.post<Todo>(this.url,todo,httpOptions);
+  }
+
 }
